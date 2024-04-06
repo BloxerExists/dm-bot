@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Home</title>
+    <link rel="icon" type="image/gif" href="https://cdn.discordapp.com/emojis/1204922422646546522.gif?size=128&quality=lossless"/>
+    <meta property="og:url" content="https://bloxerexists.github.io/dm-bot/home.html">
+    <meta property="og:title" content="What's this?? :3">
+    <meta property="og:description" content="The homepage for my DM Bot :D">
+    <meta property="og:image" content="https://tenor.com/view/kakegurui-ririka-momobami-anime-ow-o-gif-13717418">
+    <style>
+      body {
+        background-size: cover;
+		background-color: #2a2a2a;
+      }
+     
+      #textfeld {
+        background-color: #7e7e7e;
+        color: white;
+        padding: 20px;
+        margin: 50px auto;
+        border-radius: 7px;
+        width: 50%;
+        text-align: center;
+        font-size: 12px;
+        font-family: sans-serif;
+      }
+      #play-button {
+        background-color: #7e7e7e;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #play-button:hover {
+        background-color: #717171;
+      }
+	  #ToS-button {
+        background-color: #7e7e7e;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #play-button:hover {
+        background-color: #717171;
+      }
+      .rich-embed {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 50px auto;
+        max-width: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      #rich-embed .title {
+        font-weight: bold;
+        color: #333;
+      }
+      #rich-embed .description {
+        color: #666;
+      }
+      #rich-embed .footer {
+        color: #999;
+        font-style: italic;
+      }
+    </style>
+  </head>
+ <body>
+    <div id="textfeld">
+      <h1>Hey, welcome to the Website for my Discord DM Bot :D</h1>
+      <p>Have a look around and enjoy :3</p>
+    </div>
+
+
+<div style="text-align: center;">
+      <button id="play-button" onclick="playAudio()">Click me ÒwÓ</button> 
+</div>
+<div style="Text-align: bottom-left;">
+	<button id="ToS-button" onclick="document.location='tos.html'">Terms of Service</button>
+</div>
+
+   <script>
+      var audio = new Audio('sound.mp3');
+      var isPlaying = false;
+
+      function playAudio() {
+        if (isPlaying) {
+          audio.pause();
+          document.getElementById('play-button').innerHTML = 'Click me ÒwÓ';
+        } else {
+          audio.play();
+          document.getElementById('play-button').innerHTML = 'Stop the sound ^^';
+        }
+        isPlaying = !isPlaying;
+      }
+    </script>
+  </body>
+</html> 
