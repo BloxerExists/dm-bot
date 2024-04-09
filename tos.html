@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Terms of Service</title>
+    <link rel="icon" type="image/gif" href="https://cdn.discordapp.com/emojis/961736313873256508.gif?size=48&quality=lossless&name=tos"/>
+    <meta property="og:url" content="https://bloxerexists.github.io/dm-bot/tos">
+    <meta property="og:title" content="Terms of Service">
+    <meta property="og:description" content="Read before use!">
+    <meta property="og:image" content="https://tenor.com/view/menhera-chan-ding-dong-press-bell-anime-gif-17607931">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            color: #fff;
+        }
 
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: left;
+            position: relative;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        button:hover {
+            color: #aaa;
+            background-color: #333;
+        }
+        .popout-menu {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212121;
+            padding: 20px;
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .popout-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .popout-menu li {
+            margin-bottom: 15px;
+        }
+
+        .popout-menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .popout-menu li a:hover {
+            color: #aaa;
+        }
+
+        #popout-trigger {
+            position: fixed;
+            top: 20px;
+            left: 0px;
+            background-color: #212121;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: left 0.3s ease;
+            outline: none;
+            border-radius: 50%;
+        }
+
+        #popout-trigger:hover {
+            background-color: #212122;
+        }
+
+        .popout-menu.show {
+            left: 0;
+        }
+
+        .menu-open #popout-trigger {
+            left: calc(280px + 20px);
+        }
+        .rich-embed {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 50px auto;
+        max-width: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      #rich-embed .title {
+        font-weight: bold;
+        color: #333;
+      }
+      #rich-embed .description {
+        color: #666;
+      }
+      #rich-embed .footer {
+        color: #999;
+        font-style: italic;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bloxer's DM Bot</h1>
+    </header>
+
+    <div id="container">
+        <h2>Terms of Service</h2>
+        <p>• By using this bot, you agree not to break Discord's <a href="https://discord.com/terms/" target="_blank">Terms of Service</a>.</p>
+        <p>• You agree that you wont abuse the AI commands, as the commands will be removed if the API key is banned.</p>
+        <p>• Enjoy the bot! It will most likely remain free to use.</p>
+        <p>• Only use NSFW Commands with consent from other users!</p>
+        <p>• I'm not responsible for any bans in a server for abusing the bot!</p>
+        <button id="popout-trigger" onclick="toggleMenu()">&#9776;</button>
+        <div class="popout-menu" id="popout-menu">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="https://discord.com/oauth2/authorize?client_id=1220765170142548091" target="_blank">Authorize</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById('popout-menu');
+        var trigger = document.getElementById('popout-trigger');
+    
+        menu.classList.toggle('show');
+        document.body.classList.toggle('menu-open');
+
+        if (menu.classList.contains('show')) {
+          trigger.innerHTML = '✖'; 
+        } else {
+          trigger.innerHTML = '☰'; 
+        }
+      }
+    </script>
+</body>
+</html>
