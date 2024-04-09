@@ -1,57 +1,147 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" charset="utf-8">
+  <meta name="viewport" content="width=device-width" charset="utf-8">
+  <title>Home</title>
+  <link rel="icon" type="image/gif" href="https://cdn.discordapp.com/emojis/1204922422646546522.gif?size=128&quality=lossless"/>
+  <meta property="og:url" content="https://bloxerexists.github.io/dm-bot/home">
+  <meta property="og:title" content="What's this?? :3">
+  <meta property="og:description" content="The homepage for my DM Bot :D">
+  <meta property="og:image" content="https://tenor.com/view/kakegurui-ririka-momobami-anime-ow-o-gif-13717418">
     <title>Home</title>
-    <link rel="icon" type="image/gif" href="https://cdn.discordapp.com/emojis/1204922422646546522.gif?size=128&quality=lossless"/>
-    <meta property="og:url" content="https://bloxerexists.github.io/dm-bot/home.html">
-    <meta property="og:title" content="What's this?? :3">
-    <meta property="og:description" content="The homepage for my DM Bot :D">
-    <meta property="og:image" content="https://tenor.com/view/kakegurui-ririka-momobami-anime-ow-o-gif-13717418">
     <style>
-      body {
-        background-size: cover;
-		background-color: #2a2a2a;
-      }
-     
-      #textfeld {
-        background-color: #7e7e7e;
-        color: white;
-        padding: 20px;
-        margin: 50px auto;
-        border-radius: 7px;
-        width: 50%;
-        text-align: center;
-        font-size: 12px;
-        font-family: sans-serif;
-      }
-      #play-button {
-        background-color: #7e7e7e;
-        color: white;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        text-align: center;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      #play-button:hover {
-        background-color: #717171;
-      }
-	  #ToS-button {
-        background-color: #7e7e7e;
-        color: white;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        text-align: center;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      #play-button:hover {
-        background-color: #717171;
-      }
-      .rich-embed {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        button:hover {
+            color: #aaa;
+            background-color: #333;
+        }
+
+        #play-button {
+            position: absolute;
+            left: 43%;
+            bottom: -50px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            display: block;
+            margin: auto;
+            width: 150px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); 
+        }
+
+        .popout-menu {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212121;
+            padding: 20px;
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .popout-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .popout-menu li {
+            margin-bottom: 15px;
+        }
+
+        .popout-menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .popout-menu li a:hover {
+            color: #aaa;
+        }
+
+        #popout-trigger {
+            position: fixed;
+            top: 20px;
+            left: 0px;
+            background-color: #212121;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: left 0.3s ease;
+            outline: none;
+            border-radius: 50%;
+        }
+
+        #popout-trigger:hover {
+            background-color: #212122;
+        }
+
+        .popout-menu.show {
+            left: 0;
+        }
+
+        .menu-open #popout-trigger {
+            left: calc(280px + 20px);
+        }
+        .rich-embed {
         background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -72,35 +162,54 @@
         font-style: italic;
       }
     </style>
-  </head>
- <body>
-    <div id="textfeld">
-      <h1>Hey, welcome to the Website for my Discord DM Bot :D</h1>
-      <p>Have a look around and enjoy :3</p>
+</head>
+<body>
+    <header>
+        <h1>Bloxer's DM Bot</h1>
+    </header>
+
+    <div id="container">
+        <p>Hey, if you landed here, you probably are using my bot :O</p>
+        <p>Firstly, I want to thank you! This means alot to me! Feel free to look around this site ^^</p>
+        <button id="popout-trigger" onclick="toggleMenu()">&#9776;</button>
+        <div class="popout-menu" id="popout-menu">
+          <ul>
+              <li><a href="tos.html">Terms of Service</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="https://discord.com/oauth2/authorize?client_id=1220765170142548091" target="_blank">Authorize</a></li>
+          </ul>
+      </div>
+        <button id="play-button" onclick="playAudio()">Play Sound</button>
     </div>
 
+    <script>
+        var audio = new Audio('sound.mp3');
+        var isPlaying = false;
 
-<div style="text-align: center;">
-      <button id="play-button" onclick="playAudio()">Click me ÒwÓ</button> 
-</div>
-<div style="Text-align: bottom-left;">
-	<button id="ToS-button" onclick="document.location='tos.html'">Terms of Service</button>
-</div>
-
-   <script>
-      var audio = new Audio('sound.mp3');
-      var isPlaying = false;
-
-      function playAudio() {
-        if (isPlaying) {
-          audio.pause();
-          document.getElementById('play-button').innerHTML = 'Click me ÒwÓ';
-        } else {
-          audio.play();
-          document.getElementById('play-button').innerHTML = 'Stop the sound ^^';
+        function playAudio() {
+            if (isPlaying) {
+                audio.pause();
+                document.getElementById('play-button').innerHTML = 'Play Sound';
+            } else {
+                audio.play();
+                document.getElementById('play-button').innerHTML = 'Stop Sound';
+            }
+            isPlaying = !isPlaying;
         }
-        isPlaying = !isPlaying;
-      }
+
+        function toggleMenu() {
+    var menu = document.getElementById('popout-menu');
+    var trigger = document.getElementById('popout-trigger');
+    
+    menu.classList.toggle('show');
+    document.body.classList.toggle('menu-open');
+
+    if (menu.classList.contains('show')) {
+        trigger.innerHTML = '✖'; 
+    } else {
+        trigger.innerHTML = '☰'; 
+    }
+}
     </script>
-  </body>
-</html> 
+</body>
+</html>
