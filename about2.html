@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>About</title>
+    <link rel="icon" type="image/gif" href="https://cdn.discordapp.com/emojis/691685511118716988.webp?size=48&quality=lossless&name=infosymbol"/>
+    <meta property="og:url" content="https://bloxerexists.github.io/dm-bot/about">
+    <meta property="og:title" content="About">
+    <meta property="og:description" content="Just some basic information about the bot UnU">
+    <meta property="og:image" content="https://tenor.com/view/rifle-is-beautiful-chidori-rsc-izumi-book-reading-gif-15347211">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        button:hover {
+            color: #aaa;
+            background-color: #333;
+        }
+
+
+        .popout-menu {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212121;
+            padding: 20px;
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .popout-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .popout-menu li {
+            margin-bottom: 15px;
+        }
+
+        .popout-menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .popout-menu li a:hover {
+            color: #aaa;
+        }
+
+        #popout-trigger {
+            position: fixed;
+            top: 20px;
+            left: 0px;
+            background-color: #212121;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: left 0.3s ease;
+            outline: none;
+            border-radius: 50%;
+        }
+
+        #popout-trigger:hover {
+            background-color: #212122;
+        }
+
+        .popout-menu.show {
+            left: 0;
+        }
+
+        .menu-open #popout-trigger {
+            left: calc(280px + 20px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bloxer's DM Bot</h1>
+    </header>
+
+    <div id="container">
+        <p>Some information about the bot!</p>
+        <p>I created this bot out of fun and will maintain it as a hobby. If you find any bugs, feel free to report them to me at the <a href='https://github.com/BloxerExists/dm-bot/issues/new' target="_blank">issues page</a>, and make sure to apply the "bug" Tag.</p>
+        <p>You got a suggestion?? Be sure to leave it with the "Suggestion" label! :D</p>
+        <p></p>
+        <p>Thanks for reading this! This bot lives from your support💜</p>
+        <button id="popout-trigger" onclick="toggleMenu()">&#9776;</button>
+        <div class="popout-menu" id="popout-menu">
+            <ul>
+                <li><a href="tos.html">Terms of Service</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1220765170142548091" target="_blank">Authorize</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('popout-menu');
+            var trigger = document.getElementById('popout-trigger');
+            
+            menu.classList.toggle('show');
+            document.body.classList.toggle('menu-open');
+
+            if (menu.classList.contains('show')) {
+                trigger.innerHTML = '✖'; 
+            } else {
+                trigger.innerHTML = '☰'; 
+            }
+        }
+    </script>
+</body>
+</html>
