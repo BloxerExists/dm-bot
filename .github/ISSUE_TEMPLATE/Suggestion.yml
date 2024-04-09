@@ -1,0 +1,41 @@
+name: Plugin Request
+description: Create a plugin request
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # READ THIS BEFORE OPENING A REQUEST
+
+        **You will be blocked from opening further requests if you don't follow these rules.**
+        
+        Before opening a request, make sure a similar request doesn't already exist by [searching the existing issues](https://github.com/BloxerExists/dm-bot/issues?q=is%3Aissue).
+        
+        If a similar request already exists, **DO NOT reply** something like "i want this as well". Instead, react with :+1:. Only reply if you want to add additional info.
+
+        ## One Request per issue
+        Do not include multiple requests in one issue. If you are making 5 requests, make 5 separate issues
+        
+        ## Do not request any of the following features:
+          - Join Private Voice Call (Not Possible as of the time writing this)
+          - Features that include illegal behaviour
+          - Features that you can do without a bot already
+          - Features that break Discord's [Terms of Service](https://discord.com/terms/)
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      placeholder: Explain the feature in detail
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agreement-check
+    attributes:
+      label: Request Agreement
+      options:
+        - label: I read the above and made sure my Suggestion is possible and allowed
+          required: true
+        - label: "I [searched the existing issues](https://github.com/BloxerExists/dm-bot/issues?q=is%3Aissue) and made sure a similar request doesn't already exist"
+          required: true
