@@ -1,5 +1,5 @@
-name: Plugin Request
-description: Create a plugin request
+name: Suggestion
+description: Create a Suggestion
 
 body:
   - type: markdown
